@@ -3,23 +3,68 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "音乐"
+			}
+		}, {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/star/star",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/list/list",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/music-detail/music-detail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
 		}
-	    ,{
-            "path" : "pages/music-detail/music-detail",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "音乐",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "black",
+		"color": "#BDBDBD",
+		"selectedColor": "#009CFF",
+		"list": [{
+			"iconPath": "static/tabbar/tingge.png",
+			"selectedIconPath": "static/tabbar/tingge-selected.png",
+			"pagePath": "pages/index/index",
+			"text": "首页"
+		}, {
+			"iconPath": "static/tabbar/list1.png",
+			"selectedIconPath": "static/tabbar/list1-selected.png",
+			"pagePath": "pages/list/list",
+			"text": "分类"
+		}, {
+			"iconPath": "static/tabbar/shoucang.png",
+			"selectedIconPath": "static/tabbar/shoucang-selected.png",
+			"pagePath": "pages/star/star",
+			"text": "收藏"
+		}, {
+			"iconPath": "static/tabbar/wode.png",
+			"selectedIconPath": "static/tabbar/wode-selected.png",
+			"pagePath": "pages/my/my",
+			"text": "我的"
+		}]
 	}
 }
