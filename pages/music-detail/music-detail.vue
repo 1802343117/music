@@ -1,5 +1,6 @@
 <template>
-	<view>
+	<!-- 根据nightStatus的值切换白天和黑夜模式 -->
+	<view style="height: 100vh;" :class="nightStatus?'nightTheme':''">
 		<!-- 歌曲信息 -->
 		<view class="d-inline-block w-100 text-center py-4">
 			<view>
@@ -45,8 +46,8 @@
 						<my-icon iconId="icon-icon--" iconSize="60"></my-icon>
 						<text class="pt-1">播放列表</text>
 					</view>
-					<view class="flex flex-column align-center">
-						<my-icon iconId="icon-yejianmoshi" iconSize="60"></my-icon>
+					<view class="flex flex-column align-center" @tap="chageStatus(nightStatus)">
+						<my-icon :iconId="!nightStatus?'icon-yejianmoshi':'icon-yueliang'" iconSize="60"></my-icon>
 						<text class="pt-1">夜间模式</text>
 					</view>
 				</view>
@@ -104,7 +105,9 @@
 	export default {
 		data() {
 			return {
-				
+				listStatus: false,
+				collectStatus: false,
+				nightStatus: false
 			}
 		},
 		filters: {
@@ -133,7 +136,10 @@
 		methods: {
 			...mapActions({
 				'sliderToPlay'
-			})
+			}),
+			chageStatus(nightStatus) {
+				this[statusType] = !this[statusType]
+			}
 		}
 	}
 </script>
